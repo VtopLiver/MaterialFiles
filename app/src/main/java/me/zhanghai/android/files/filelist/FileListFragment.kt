@@ -49,6 +49,7 @@ import me.zhanghai.android.effortlesspermissions.AfterPermissionDenied
 import me.zhanghai.android.effortlesspermissions.EffortlessPermissions
 import me.zhanghai.android.effortlesspermissions.OpenAppDetailsDialogFragment
 import me.zhanghai.android.files.R
+import me.zhanghai.android.files.ShowPathActivity
 import me.zhanghai.android.files.app.clipboardManager
 import me.zhanghai.android.files.databinding.FileListFragmentAppBarIncludeBinding
 import me.zhanghai.android.files.databinding.FileListFragmentBinding
@@ -404,7 +405,7 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
                 refresh()
                 true
             }
-            R.id.action_select_all -> {
+            R.id.action_select_All -> {
                 selectAllFiles()
                 true
             }
@@ -418,6 +419,10 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
             }
             R.id.action_copy_path -> {
                 copyPath()
+                true
+            }
+            R.id.action_show_path -> {
+                showPath()
                 true
             }
             R.id.action_open_in_terminal -> {
@@ -650,6 +655,11 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
     private fun copyPath() {
         copyPath(currentPath)
     }
+    private fun showPath() {
+        //var intent=ShowPathActivity::class.createIntent()
+        var intent=Intent(getActivity(), ShowPathActivity::class.java)
+        startActivity(intent)
+    }
 
     private fun openInTerminal() {
         val path = currentPath
@@ -754,7 +764,7 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
             overlayActionMode.title = getString(R.string.file_list_select_title_format, files.size)
             overlayActionMode.setMenuResource(R.menu.file_list_pick)
             val menu = overlayActionMode.menu
-            menu.findItem(R.id.action_select_all).isVisible = pickOptions.allowMultiple
+            menu.findItem(R.id.action_select_All).isVisible = pickOptions.allowMultiple
         } else {
             overlayActionMode.title = getString(R.string.file_list_select_title_format, files.size)
             overlayActionMode.setMenuResource(R.menu.file_list_select)
@@ -821,7 +831,7 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
                 shareFiles(viewModel.selectedFiles)
                 true
             }
-            R.id.action_select_all -> {
+            R.id.action_select_All -> {
                 selectAllFiles()
                 true
             }
@@ -1236,7 +1246,6 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
 
     override val currentPath: Path
         get() = viewModel.currentPath
-
     override fun navigateToRoot(path: Path) {
         collapseSearchView()
         viewModel.resetTo(path)
@@ -1332,7 +1341,7 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
             fun inflate(menu: Menu, inflater: MenuInflater): MenuBinding {
                 inflater.inflate(R.menu.file_list, menu)
                 return MenuBinding(
-                    menu, menu.findItem(R.id.action_search), menu.findItem(R.id.action_sort),
+                    menu, menu.findItem(R.id.action_Search), menu.findItem(R.id.action_sort),
                     menu.findItem(R.id.action_sort_by_name),
                     menu.findItem(R.id.action_sort_by_type),
                     menu.findItem(R.id.action_sort_by_size),
@@ -1340,7 +1349,7 @@ class FileListFragment : Fragment(), BreadcrumbLayout.Listener, FileListAdapter.
                     menu.findItem(R.id.action_sort_order_ascending),
                     menu.findItem(R.id.action_sort_directories_first),
                     menu.findItem(R.id.action_sort_path_specific),
-                    menu.findItem(R.id.action_select_all),
+                    menu.findItem(R.id.action_select_All),
                     menu.findItem(R.id.action_show_hidden_files)
                 )
             }
