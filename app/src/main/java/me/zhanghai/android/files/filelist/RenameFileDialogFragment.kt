@@ -28,8 +28,9 @@ class RenameFileDialogFragment : FileNameDialogFragment() {
 
         if (savedInstanceState == null) {
             val file = args.file
-            binding.nameEdit.setText(file.name)
-            binding.nameEdit.setSelection(0, file.baseName.length)
+            //binding.nameEdit.setText(file.name)
+            //binding.nameEdit.setSelection(0, file.baseName.length)
+            binding.nameEdit.setHint(file.name)
         }
         return dialog
     }
