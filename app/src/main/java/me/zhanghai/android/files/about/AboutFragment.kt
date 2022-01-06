@@ -44,7 +44,7 @@ class AboutFragment : Fragment() {
             startActivitySafe(PRIVACY_POLICY_URI.createViewIntent())
         }
 //#endif
-        binding.authorNameLayout.setOnClickListener {
+        binding.NameLayout.setOnClickListener {
             startActivitySafe(AUTHOR_RESUME_URI.createViewIntent())
         }
         binding.authorGitHubLayout.setOnClickListener {

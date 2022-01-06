@@ -80,6 +80,7 @@
                                 android:ellipsize="end"
                                 android:maxLines="1"
                                 android:text="@string/app_name"
+                                android:textColor="#FF0000"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
                         </LinearLayout>
 
@@ -117,6 +118,7 @@
                                     android:ellipsize="end"
                                     android:maxLines="1"
                                     android:text="@string/about_version_title"
+                                    android:textColor="#0000FF"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
                                 <TextView
@@ -126,6 +128,7 @@
                                     android:ellipsize="end"
                                     android:maxLines="1"
                                     android:text="@string/app_version"
+                                    android:textColor="#0000FF"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
                             </LinearLayout>
                         </me.zhanghai.android.foregroundcompat.ForegroundLinearLayout>
@@ -153,6 +156,7 @@
                                 android:layout_marginStart="@dimen/content_start_from_screen_edge_margin_minus_24dp"
                                 android:ellipsize="end"
                                 android:maxLines="1"
+                                android:textColor="#0000FF"
                                 android:text="@string/about_github_title"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
                         </me.zhanghai.android.foregroundcompat.ForegroundLinearLayout>
@@ -181,6 +185,7 @@
                                 android:ellipsize="end"
                                 android:maxLines="1"
                                 android:text="@string/about_licenses_title"
+                                android:textColor="#0000FF"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
                         </me.zhanghai.android.foregroundcompat.ForegroundLinearLayout>
 
@@ -208,6 +213,7 @@
                                 android:layout_marginStart="@dimen/content_start_from_screen_edge_margin_minus_24dp"
                                 android:ellipsize="end"
                                 android:maxLines="1"
+                                android:textColor="#0000FF"
                                 android:text="@string/about_privacy_policy_title"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
                         </me.zhanghai.android.foregroundcompat.ForegroundLinearLayout>
@@ -245,7 +251,7 @@
                         </LinearLayout>
 
                         <me.zhanghai.android.foregroundcompat.ForegroundLinearLayout
-                            android:id="@+id/authorNameLayout"
+                            android:id="@+id/NameLayout"
                             android:layout_width="match_parent"
                             android:layout_height="?listPreferredItemHeightSmall"
                             android:paddingStart="?android:listPreferredItemPaddingStart"
@@ -270,6 +276,7 @@
                                 android:ellipsize="end"
                                 android:maxLines="1"
                                 android:text="@string/about_author_name_title"
+                                android:textColor="#0000FF"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
                         </me.zhanghai.android.foregroundcompat.ForegroundLinearLayout>
 
@@ -296,6 +303,7 @@
                                 android:layout_marginStart="@dimen/content_start_from_screen_edge_margin_minus_24dp"
                                 android:ellipsize="end"
                                 android:maxLines="1"
+                                android:textColor="#0000FF"
                                 android:text="@string/about_author_github_title"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
                         </me.zhanghai.android.foregroundcompat.ForegroundLinearLayout>
@@ -323,6 +331,7 @@
                                 android:layout_marginStart="@dimen/content_start_from_screen_edge_margin_minus_24dp"
                                 android:ellipsize="end"
                                 android:maxLines="1"
+                                android:textColor="#0000FF"
                                 android:text="@string/about_author_google_plus_title"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
                         </me.zhanghai.android.foregroundcompat.ForegroundLinearLayout>
@@ -350,6 +359,7 @@
                                 android:layout_marginStart="@dimen/content_start_from_screen_edge_margin_minus_24dp"
                                 android:ellipsize="end"
                                 android:maxLines="1"
+                                android:textColor="#0000FF"
                                 android:text="@string/about_author_twitter_title"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
                         </me.zhanghai.android.foregroundcompat.ForegroundLinearLayout>
